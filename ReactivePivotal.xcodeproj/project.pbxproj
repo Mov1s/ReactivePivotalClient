@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6707F6844FBE3FDEAC0BBD67 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083BA75FB3529C843358F60C /* libPods.a */; };
 		BB078F951AA6A09C004B57DC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F941AA6A09C004B57DC /* LoginViewController.m */; };
+		BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F981AA6A35B004B57DC /* PVRequestSignal.m */; };
+		BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F9C1AA6AFFA004B57DC /* NSString+Additions.m */; };
+		BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F9F1AA6B123004B57DC /* NSMutableURLRequest+Additions.m */; };
+		BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078FA21AA6B462004B57DC /* NSUserDefaults+Additions.m */; };
 		BB22FB2B1AA69CBB0061966B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB2A1AA69CBB0061966B /* main.m */; };
 		BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB2D1AA69CBB0061966B /* AppDelegate.m */; };
 		BB22FB311AA69CBB0061966B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB301AA69CBB0061966B /* ViewController.m */; };
@@ -33,6 +37,14 @@
 		3314C1ADC938248A3DD98BBF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB078F931AA6A09C004B57DC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BB078F941AA6A09C004B57DC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BB078F971AA6A35B004B57DC /* PVRequestSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVRequestSignal.h; sourceTree = "<group>"; };
+		BB078F981AA6A35B004B57DC /* PVRequestSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVRequestSignal.m; sourceTree = "<group>"; };
+		BB078F9B1AA6AFFA004B57DC /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		BB078F9C1AA6AFFA004B57DC /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		BB078F9E1AA6B123004B57DC /* NSMutableURLRequest+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Additions.h"; sourceTree = "<group>"; };
+		BB078F9F1AA6B123004B57DC /* NSMutableURLRequest+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Additions.m"; sourceTree = "<group>"; };
+		BB078FA11AA6B462004B57DC /* NSUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Additions.h"; sourceTree = "<group>"; };
+		BB078FA21AA6B462004B57DC /* NSUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Additions.m"; sourceTree = "<group>"; };
 		BB22FB251AA69CBB0061966B /* ReactivePivotal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactivePivotal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB22FB291AA69CBB0061966B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB22FB2A1AA69CBB0061966B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +98,28 @@
 			path = "Login Scene";
 			sourceTree = "<group>";
 		};
+		BB078F961AA6A2EE004B57DC /* API Signals */ = {
+			isa = PBXGroup;
+			children = (
+				BB078F971AA6A35B004B57DC /* PVRequestSignal.h */,
+				BB078F981AA6A35B004B57DC /* PVRequestSignal.m */,
+			);
+			path = "API Signals";
+			sourceTree = "<group>";
+		};
+		BB078F9A1AA6AF60004B57DC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BB078F9B1AA6AFFA004B57DC /* NSString+Additions.h */,
+				BB078F9C1AA6AFFA004B57DC /* NSString+Additions.m */,
+				BB078F9E1AA6B123004B57DC /* NSMutableURLRequest+Additions.h */,
+				BB078F9F1AA6B123004B57DC /* NSMutableURLRequest+Additions.m */,
+				BB078FA11AA6B462004B57DC /* NSUserDefaults+Additions.h */,
+				BB078FA21AA6B462004B57DC /* NSUserDefaults+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		BB22FB1C1AA69CBB0061966B = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +143,8 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
+				BB078F9A1AA6AF60004B57DC /* Categories */,
+				BB078F961AA6A2EE004B57DC /* API Signals */,
 				BB078F921AA6A088004B57DC /* Login Scene */,
 				BB22FB2C1AA69CBB0061966B /* AppDelegate.h */,
 				BB22FB2D1AA69CBB0061966B /* AppDelegate.m */,
@@ -291,10 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */,
 				BB078F951AA6A09C004B57DC /* LoginViewController.m in Sources */,
 				BB22FB311AA69CBB0061966B /* ViewController.m in Sources */,
+				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
+				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
+				BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
