@@ -13,6 +13,7 @@
 		BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F9C1AA6AFFA004B57DC /* NSString+Additions.m */; };
 		BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078F9F1AA6B123004B57DC /* NSMutableURLRequest+Additions.m */; };
 		BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB078FA21AA6B462004B57DC /* NSUserDefaults+Additions.m */; };
+		BB158C1F1AAB4D110028A96A /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB158C1E1AAB4D110028A96A /* LoginViewModel.m */; };
 		BB22FB2B1AA69CBB0061966B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB2A1AA69CBB0061966B /* main.m */; };
 		BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB2D1AA69CBB0061966B /* AppDelegate.m */; };
 		BB22FB311AA69CBB0061966B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB301AA69CBB0061966B /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		BB078F9F1AA6B123004B57DC /* NSMutableURLRequest+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Additions.m"; sourceTree = "<group>"; };
 		BB078FA11AA6B462004B57DC /* NSUserDefaults+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Additions.h"; sourceTree = "<group>"; };
 		BB078FA21AA6B462004B57DC /* NSUserDefaults+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Additions.m"; sourceTree = "<group>"; };
+		BB158C1D1AAB4D110028A96A /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		BB158C1E1AAB4D110028A96A /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		BB22FB251AA69CBB0061966B /* ReactivePivotal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactivePivotal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB22FB291AA69CBB0061966B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB22FB2A1AA69CBB0061966B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 			children = (
 				BB078F931AA6A09C004B57DC /* LoginViewController.h */,
 				BB078F941AA6A09C004B57DC /* LoginViewController.m */,
+				BB158C1D1AAB4D110028A96A /* LoginViewModel.h */,
+				BB158C1E1AAB4D110028A96A /* LoginViewModel.m */,
 			);
 			path = "Login Scene";
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
 				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
 				BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */,
+				BB158C1F1AAB4D110028A96A /* LoginViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,6 +44,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="validateApiKey:" destination="jvH-Nk-Qtx" eventType="touchUpInside" id="6uG-fX-oRX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,10 +62,12 @@
                     <connections>
                         <outlet property="apiTokenTextField" destination="imq-uK-Wg0" id="6f0-gx-JpR"/>
                         <outlet property="continueButton" destination="Ccf-B8-qeT" id="WgW-q3-yx0"/>
+                        <outlet property="viewModel" destination="jvH-Nk-Qtx" id="PCd-Na-dyN"/>
                         <segue destination="ux2-4m-aKW" kind="show" identifier="loginSuccessSegue" id="0Qy-Tu-Dsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0e-4a-bWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="jvH-Nk-Qtx" customClass="LoginViewModel"/>
             </objects>
             <point key="canvasLocation" x="324" y="424"/>
         </scene>
