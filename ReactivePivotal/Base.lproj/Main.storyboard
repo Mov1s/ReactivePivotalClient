@@ -187,9 +187,6 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="rpTintColor">
-                                                    <color key="value" red="0.51300165620000004" green="0.8061868687" blue="0.2036085027" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
                                                     <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
@@ -253,6 +250,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SWg-et-nW8" kind="show" id="ded-6B-L5U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -286,6 +286,24 @@
                 <customObject id="m7c-bV-gqC" customClass="ProjectsViewModel"/>
             </objects>
             <point key="canvasLocation" x="824" y="424"/>
+        </scene>
+        <!--Velocity View Controller-->
+        <scene sceneID="gvD-1o-RcL">
+            <objects>
+                <viewController id="SWg-et-nW8" customClass="VelocityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3J7-Bl-sei"/>
+                        <viewControllerLayoutGuide type="bottom" id="6hw-Ef-sHP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yCG-Vu-ztS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIm-FO-hRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="424"/>
         </scene>
     </scenes>
 </document>

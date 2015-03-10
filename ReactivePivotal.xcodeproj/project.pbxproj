@@ -26,6 +26,8 @@
 		BBA9F57D1AAF4AF400FF2C20 /* RPCircleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F57C1AAF4AF400FF2C20 /* RPCircleLabel.m */; };
 		BBA9F5811AAF4EDF00FF2C20 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5801AAF4EDF00FF2C20 /* ProjectsViewController.m */; };
 		BBA9F5841AAF4EED00FF2C20 /* ProjectsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5831AAF4EED00FF2C20 /* ProjectsViewModel.m */; };
+		BBA9F5881AAF712D00FF2C20 /* VelocityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */; };
+		BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		BBA9F5801AAF4EDF00FF2C20 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		BBA9F5821AAF4EED00FF2C20 /* ProjectsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewModel.h; sourceTree = "<group>"; };
 		BBA9F5831AAF4EED00FF2C20 /* ProjectsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewModel.m; sourceTree = "<group>"; };
+		BBA9F5861AAF712D00FF2C20 /* VelocityViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityViewModel.h; sourceTree = "<group>"; };
+		BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityViewModel.m; sourceTree = "<group>"; };
+		BBA9F5891AAF761300FF2C20 /* VelocityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityViewController.h; sourceTree = "<group>"; };
+		BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityViewController.m; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +169,7 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
+				BBA9F5851AAF711F00FF2C20 /* Velocity Scene */,
 				BBA9F57E1AAF4ECB00FF2C20 /* Projects Scene */,
 				BBA9F5791AAF4AC000FF2C20 /* View Components */,
 				BB078F961AA6A2EE004B57DC /* API Signals */,
@@ -244,6 +251,17 @@
 				BBA9F5831AAF4EED00FF2C20 /* ProjectsViewModel.m */,
 			);
 			path = "Projects Scene";
+			sourceTree = "<group>";
+		};
+		BBA9F5851AAF711F00FF2C20 /* Velocity Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9F5861AAF712D00FF2C20 /* VelocityViewModel.h */,
+				BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */,
+				BBA9F5891AAF761300FF2C20 /* VelocityViewController.h */,
+				BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */,
+			);
+			path = "Velocity Scene";
 			sourceTree = "<group>";
 		};
 		C0259E0FD45F34D9BD8F0EB8 /* Frameworks */ = {
@@ -390,10 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */,
+				BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */,
 				BB078F951AA6A09C004B57DC /* LoginViewController.m in Sources */,
 				BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */,
 				BB22FB311AA69CBB0061966B /* ViewController.m in Sources */,
 				BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */,
+				BBA9F5881AAF712D00FF2C20 /* VelocityViewModel.m in Sources */,
 				BBA9F5811AAF4EDF00FF2C20 /* ProjectsViewController.m in Sources */,
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,

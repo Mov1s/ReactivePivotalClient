@@ -122,4 +122,40 @@
     }];
 }
 
+//Return a set of iterations from the project. (Paginated)
++ (RACSignal *)requestIterationsForProject: (NSNumber *)projectId
+{
+    return [RACSignal createSignal: ^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        NSLog(@"Starting request");
+        
+        //Create the request
+        NSString *routeString = [NSString stringWithRoute: @"https://www.pivotaltracker.com/services/v5/projects/:projectId/iterations?limit=10&offset=1", projectId];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithAuthenticatedPivotalURL: [NSURL URLWithString: routeString]];
+        
+        //Create a request operation for serializing the response as JSON
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest: request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        //Completion blocks
+        [operation setCompletionBlockWithSuccess: ^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            //Success
+            NSLog(@"Request success");
+            [subscriber sendNext: responseObject];
+            [subscriber sendCompleted];
+        } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+            //Failure
+            NSLog(@"Request failed");
+            [subscriber sendError: error];
+        }];
+        
+        //Send the request
+        [operation start];
+        
+        return nil;
+    }];
+}
+
 @end
