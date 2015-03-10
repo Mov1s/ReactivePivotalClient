@@ -298,8 +298,21 @@
                     <view key="view" contentMode="scaleToFill" id="yCG-Vu-ztS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nj5-Xe-xWA">
+                                <rect key="frame" x="189" y="349" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nj5-Xe-xWA" secondAttribute="centerY" constant="0.5" id="NYd-zO-4Dw"/>
+                            <constraint firstAttribute="centerX" secondItem="nj5-Xe-xWA" secondAttribute="centerX" constant="-0.5" id="RJc-ns-KWm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="nj5-Xe-xWA" id="ZDs-cM-CHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIm-FO-hRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

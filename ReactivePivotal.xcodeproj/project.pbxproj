@@ -28,6 +28,7 @@
 		BBA9F5841AAF4EED00FF2C20 /* ProjectsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5831AAF4EED00FF2C20 /* ProjectsViewModel.m */; };
 		BBA9F5881AAF712D00FF2C20 /* VelocityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */; };
 		BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */; };
+		BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityViewModel.m; sourceTree = "<group>"; };
 		BBA9F5891AAF761300FF2C20 /* VelocityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityViewController.h; sourceTree = "<group>"; };
 		BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityViewController.m; sourceTree = "<group>"; };
+		BBA9F58C1AAF7A2600FF2C20 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +139,8 @@
 		BB078F9A1AA6AF60004B57DC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BBA9F58C1AAF7A2600FF2C20 /* NSArray+Additions.h */,
+				BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */,
 				BB078F9B1AA6AFFA004B57DC /* NSString+Additions.h */,
 				BB078F9C1AA6AFFA004B57DC /* NSString+Additions.m */,
 				BB078F9E1AA6B123004B57DC /* NSMutableURLRequest+Additions.h */,
@@ -418,6 +423,7 @@
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
+				BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */,
 				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
 				BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */,
 				BBA9F57D1AAF4AF400FF2C20 /* RPCircleLabel.m in Sources */,

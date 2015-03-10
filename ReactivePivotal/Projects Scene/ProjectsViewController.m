@@ -9,6 +9,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "ProjectsViewController.h"
 #import "ProjectsViewModel.h"
+#import "VelocityViewController.h"
+#import "VelocityViewModel.h"
 
 @interface ProjectsViewController ()
 
@@ -48,6 +50,12 @@
     RAC(self.activeProjectCountLabel, text) = [RACObserve(self.viewModel, activeProjectCount) map: ^id(NSNumber *value) {
         return [value stringValue];
     }];
+}
+
+- (void)prepareForSegue: (UIStoryboardSegue *)segue sender: (id)sender
+{
+    VelocityViewController *controller = segue.destinationViewController;
+    controller.viewModel = [[VelocityViewModel alloc] initWithProjectId: @994928];
 }
 
 #pragma mark - UITableView Datasource

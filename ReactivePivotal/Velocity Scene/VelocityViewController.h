@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VelocityViewModel.h"
 
 @interface VelocityViewController : UIViewController
+
+@property (nonatomic, strong) VelocityViewModel *viewModel;
 
 @end

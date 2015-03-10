@@ -6,32 +6,26 @@
 //  Copyright (c) 2015 RyanPopa. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "VelocityViewController.h"
 
 @interface VelocityViewController ()
+
+//Activity indicator to show the progress of velocity calculations
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
 @implementation VelocityViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //Bind plot data
+    RAC(self.activityIndicator, hidden) = [RACObserve(self.viewModel, velocityPlotPoints) map: ^id(NSArray *value) {
+        return @(value.count != 0);
+    }];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
