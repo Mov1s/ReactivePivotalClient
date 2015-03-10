@@ -63,13 +63,29 @@
                         <outlet property="apiTokenTextField" destination="imq-uK-Wg0" id="6f0-gx-JpR"/>
                         <outlet property="continueButton" destination="Ccf-B8-qeT" id="WgW-q3-yx0"/>
                         <outlet property="viewModel" destination="jvH-Nk-Qtx" id="PCd-Na-dyN"/>
-                        <segue destination="ux2-4m-aKW" kind="show" identifier="loginSuccessSegue" id="0Qy-Tu-Dsu"/>
+                        <segue destination="fpm-yV-mNU" kind="show" identifier="loginSuccessSegue" id="DJ0-1Z-Rno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0e-4a-bWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="jvH-Nk-Qtx" customClass="LoginViewModel"/>
             </objects>
             <point key="canvasLocation" x="324" y="424"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3f8-3Z-Gp8">
+            <objects>
+                <navigationController id="FMX-Lk-5Vk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4O7-l2-xA4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ux2-4m-aKW" kind="relationship" relationship="rootViewController" id="wRF-YT-Br2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pB2-aI-q51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="-398"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="TGp-hs-Psw">
@@ -122,6 +138,13 @@
                             <constraint firstItem="ya1-D8-Lr4" firstAttribute="top" secondItem="gbs-n5-9Vh" secondAttribute="topMargin" id="upr-yl-Gg6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="feF-d6-lTD">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="09z-Nf-Qxb">
+                            <connections>
+                                <action selector="closeAction:" destination="ux2-4m-aKW" id="n2x-Pz-ja6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ya1-D8-Lr4" id="00b-yX-G14"/>
                         <outlet property="viewModel" destination="ccU-Yo-Z1f" id="0jS-Yo-lFB"/>
@@ -130,7 +153,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8s-wE-vZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="ccU-Yo-Z1f" customClass="NotificationsViewModel"/>
             </objects>
-            <point key="canvasLocation" x="823" y="424"/>
+            <point key="canvasLocation" x="1844" y="-398"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="CZm-8O-ooT">
+            <objects>
+                <viewController id="fpm-yV-mNU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vm7-db-DcX"/>
+                        <viewControllerLayoutGuide type="bottom" id="LeY-RM-9no"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qAT-Wi-GcG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Projects" id="KoT-13-vXe">
+                        <barButtonItem key="rightBarButtonItem" title="Notifications" id="kUj-Qu-J7e">
+                            <connections>
+                                <segue destination="FMX-Lk-5Vk" kind="presentation" id="mJs-FZ-gdM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhb-Xw-w5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="424"/>
         </scene>
     </scenes>
 </document>

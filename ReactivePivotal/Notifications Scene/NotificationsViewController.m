@@ -52,4 +52,11 @@
     return cell;
 }
 
+#pragma mark - Actions
+//Close the modal
+- (IBAction)closeAction: (id)sender
+{
+    [self dismissViewControllerAnimated: YES completion: nil];
+}
+
 @end
