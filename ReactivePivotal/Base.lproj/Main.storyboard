@@ -303,15 +303,55 @@
                                 <rect key="frame" x="189" y="349" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJz-xw-3YN" customClass="RPPlot">
+                                <rect key="frame" x="4" y="64" width="410" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ber-0i-cDH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="plotTitle" value="Velocity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erK-38-7Ik">
+                                <rect key="frame" x="0.0" y="64" width="4" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="4" id="EY2-SU-mYI"/>
+                                    <constraint firstAttribute="height" constant="200" id="Nog-nY-M3f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-jb-CEM">
+                                <rect key="frame" x="0.0" y="264" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="SuY-df-en4"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kk6-jb-CEM" secondAttribute="trailing" id="287-zF-yAY"/>
+                            <constraint firstItem="kk6-jb-CEM" firstAttribute="top" secondItem="IJz-xw-3YN" secondAttribute="bottom" id="A4T-d0-IcG"/>
+                            <constraint firstItem="IJz-xw-3YN" firstAttribute="top" secondItem="3J7-Bl-sei" secondAttribute="bottom" id="IFB-G4-fJp"/>
                             <constraint firstAttribute="centerY" secondItem="nj5-Xe-xWA" secondAttribute="centerY" constant="0.5" id="NYd-zO-4Dw"/>
                             <constraint firstAttribute="centerX" secondItem="nj5-Xe-xWA" secondAttribute="centerX" constant="-0.5" id="RJc-ns-KWm"/>
+                            <constraint firstItem="erK-38-7Ik" firstAttribute="leading" secondItem="yCG-Vu-ztS" secondAttribute="leading" id="Ved-AY-9IO"/>
+                            <constraint firstItem="erK-38-7Ik" firstAttribute="top" secondItem="3J7-Bl-sei" secondAttribute="bottom" id="gQ3-Gv-Wi3"/>
+                            <constraint firstItem="kk6-jb-CEM" firstAttribute="leading" secondItem="yCG-Vu-ztS" secondAttribute="leading" id="iMV-HM-VRU"/>
+                            <constraint firstAttribute="trailing" secondItem="IJz-xw-3YN" secondAttribute="trailing" id="ofT-yV-I7m"/>
+                            <constraint firstItem="IJz-xw-3YN" firstAttribute="leading" secondItem="yCG-Vu-ztS" secondAttribute="leading" constant="4" id="yjo-2R-k1B"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="nj5-Xe-xWA" id="ZDs-cM-CHp"/>
+                        <outlet property="plot" destination="IJz-xw-3YN" id="HpI-go-pci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIm-FO-hRy" userLabel="First Responder" sceneMemberID="firstResponder"/>

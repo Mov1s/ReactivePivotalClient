@@ -29,6 +29,8 @@
 		BBA9F5881AAF712D00FF2C20 /* VelocityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */; };
 		BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */; };
 		BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */; };
+		BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */; };
+		BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB75C1AB328D400FB0F66 /* RPView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,10 @@
 		BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityViewController.m; sourceTree = "<group>"; };
 		BBA9F58C1AAF7A2600FF2C20 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		BBA9F5901AAF7CB600FF2C20 /* RPPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPlot.h; sourceTree = "<group>"; };
+		BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPlot.m; sourceTree = "<group>"; };
+		BBEDB75B1AB328D400FB0F66 /* RPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPView.h; sourceTree = "<group>"; };
+		BBEDB75C1AB328D400FB0F66 /* RPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPView.m; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,14 +180,14 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
-				BBA9F5851AAF711F00FF2C20 /* Velocity Scene */,
-				BBA9F57E1AAF4ECB00FF2C20 /* Projects Scene */,
-				BBA9F5791AAF4AC000FF2C20 /* View Components */,
 				BB078F961AA6A2EE004B57DC /* API Signals */,
 				BB078F9A1AA6AF60004B57DC /* Categories */,
 				BB078F921AA6A088004B57DC /* Login Scene */,
 				BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */,
+				BBA9F57E1AAF4ECB00FF2C20 /* Projects Scene */,
 				BB22FB281AA69CBB0061966B /* Supporting Files */,
+				BBA9F5851AAF711F00FF2C20 /* Velocity Scene */,
+				BBA9F5791AAF4AC000FF2C20 /* View Components */,
 				BB22FB2C1AA69CBB0061966B /* AppDelegate.h */,
 				BB22FB2D1AA69CBB0061966B /* AppDelegate.m */,
 				BB22FB351AA69CBB0061966B /* Images.xcassets */,
@@ -233,6 +239,8 @@
 		BBA9F5791AAF4AC000FF2C20 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				BBEDB75A1AB328C600FB0F66 /* View */,
+				BBA9F58F1AAF7CA100FF2C20 /* Plot */,
 				BBA9F57A1AAF4ADF00FF2C20 /* Circle Label */,
 			);
 			path = "View Components";
@@ -267,6 +275,24 @@
 				BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */,
 			);
 			path = "Velocity Scene";
+			sourceTree = "<group>";
+		};
+		BBA9F58F1AAF7CA100FF2C20 /* Plot */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9F5901AAF7CB600FF2C20 /* RPPlot.h */,
+				BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */,
+			);
+			path = Plot;
+			sourceTree = "<group>";
+		};
+		BBEDB75A1AB328C600FB0F66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDB75B1AB328D400FB0F66 /* RPView.h */,
+				BBEDB75C1AB328D400FB0F66 /* RPView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C0259E0FD45F34D9BD8F0EB8 /* Frameworks */ = {
@@ -412,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */,
 				BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */,
 				BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */,
 				BB078F951AA6A09C004B57DC /* LoginViewController.m in Sources */,
@@ -423,6 +450,7 @@
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
+				BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */,
 				BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */,
 				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
 				BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */,

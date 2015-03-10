@@ -130,7 +130,7 @@
         NSLog(@"Starting request");
         
         //Create the request
-        NSString *routeString = [NSString stringWithRoute: @"https://www.pivotaltracker.com/services/v5/projects/:projectId/iterations?limit=10&offset=1", projectId];
+        NSString *routeString = [NSString stringWithRoute: @"https://www.pivotaltracker.com/services/v5/projects/:projectId/iterations?offset=-10&scope=done", projectId];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithAuthenticatedPivotalURL: [NSURL URLWithString: routeString]];
         
         //Create a request operation for serializing the response as JSON
