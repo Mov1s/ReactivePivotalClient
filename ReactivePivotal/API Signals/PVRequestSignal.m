@@ -55,6 +55,8 @@
 {
     return [RACSignal createSignal: ^RACDisposable *(id<RACSubscriber> subscriber) {
         
+        NSLog(@"Starting request");
+        
         //Create the request
         NSString *routeString = @"https://www.pivotaltracker.com/services/v5/my/notifications";
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithAuthenticatedPivotalURL: [NSURL URLWithString: routeString]];
@@ -67,11 +69,13 @@
         [operation setCompletionBlockWithSuccess: ^(AFHTTPRequestOperation *operation, id responseObject) {
             
             //Success
+            NSLog(@"Request success");
             [subscriber sendNext: responseObject];
             [subscriber sendCompleted];
         } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
             
             //Failure
+            NSLog(@"Request failed");
             [subscriber sendError: error];
         }];
         

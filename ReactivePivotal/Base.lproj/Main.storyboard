@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="324" y="424"/>
         </scene>
-        <!--View Controller-->
+        <!--Notifications View Controller-->
         <scene sceneID="TGp-hs-Psw">
             <objects>
-                <viewController id="ux2-4m-aKW" sceneMemberID="viewController">
+                <viewController id="ux2-4m-aKW" customClass="NotificationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7n1-9Y-kxp"/>
                         <viewControllerLayoutGuide type="bottom" id="NDv-47-ep8"/>
@@ -84,8 +84,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="viewModel" destination="ccU-Yo-Z1f" id="0jS-Yo-lFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8s-wE-vZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ccU-Yo-Z1f" customClass="NotificationsViewModel"/>
             </objects>
             <point key="canvasLocation" x="823" y="424"/>
         </scene>
