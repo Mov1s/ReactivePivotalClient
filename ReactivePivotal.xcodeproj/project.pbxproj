@@ -23,6 +23,7 @@
 		BB22FB451AA69CBB0061966B /* ReactivePivotalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB441AA69CBB0061966B /* ReactivePivotalTests.m */; };
 		BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */; };
 		BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */; };
+		BBA9F57D1AAF4AF400FF2C20 /* RPCircleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F57C1AAF4AF400FF2C20 /* RPCircleLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewModel.m; sourceTree = "<group>"; };
 		BBA9F5761AAF31EC00FF2C20 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
 		BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		BBA9F57B1AAF4AF400FF2C20 /* RPCircleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCircleLabel.h; sourceTree = "<group>"; };
+		BBA9F57C1AAF4AF400FF2C20 /* RPCircleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCircleLabel.m; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +157,7 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
+				BBA9F5791AAF4AC000FF2C20 /* View Components */,
 				BB078F961AA6A2EE004B57DC /* API Signals */,
 				BB078F9A1AA6AF60004B57DC /* Categories */,
 				BB078F921AA6A088004B57DC /* Login Scene */,
@@ -205,6 +209,23 @@
 				BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */,
 			);
 			path = "Notifications Scene";
+			sourceTree = "<group>";
+		};
+		BBA9F5791AAF4AC000FF2C20 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9F57A1AAF4ADF00FF2C20 /* Circle Label */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		BBA9F57A1AAF4ADF00FF2C20 /* Circle Label */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9F57B1AAF4AF400FF2C20 /* RPCircleLabel.h */,
+				BBA9F57C1AAF4AF400FF2C20 /* RPCircleLabel.m */,
+			);
+			path = "Circle Label";
 			sourceTree = "<group>";
 		};
 		C0259E0FD45F34D9BD8F0EB8 /* Frameworks */ = {
@@ -360,6 +381,7 @@
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
 				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
 				BB078FA31AA6B462004B57DC /* NSUserDefaults+Additions.m in Sources */,
+				BBA9F57D1AAF4AF400FF2C20 /* RPCircleLabel.m in Sources */,
 				BB158C1F1AAB4D110028A96A /* LoginViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

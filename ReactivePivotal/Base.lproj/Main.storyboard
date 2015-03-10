@@ -166,7 +166,96 @@
                     <view key="view" contentMode="scaleToFill" id="qAT-Wi-GcG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-H3-Wkq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Wdf-Ar-gyh" userLabel="Stats Container">
+                                    <rect key="frame" x="0.0" y="64" width="414" height="103"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-Wu-yKm" userLabel="Total Project Count" customClass="RPCircleLabel">
+                                            <rect key="frame" x="60" y="14" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="JPb-MK-GCw"/>
+                                                <constraint firstAttribute="width" constant="48" id="nR8-es-qai"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="rpTintColor">
+                                                    <color key="value" red="0.51300165620000004" green="0.8061868687" blue="0.2036085027" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKL-Eh-V4P" userLabel="Active Project Count" customClass="RPCircleLabel">
+                                            <rect key="frame" x="306" y="14" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="48" id="CuC-XF-7DD"/>
+                                                <constraint firstAttribute="height" constant="48" id="hWu-z2-GTG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZo-Tf-Gds">
+                                            <rect key="frame" x="32" y="67" width="104" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySn-Jg-gZE">
+                                            <rect key="frame" x="273" y="67" width="115" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="wKL-Eh-V4P" firstAttribute="centerX" secondItem="ySn-Jg-gZE" secondAttribute="centerX" id="TN2-Zf-Swn"/>
+                                        <constraint firstItem="ySn-Jg-gZE" firstAttribute="top" secondItem="wKL-Eh-V4P" secondAttribute="bottom" constant="5" id="WYR-YF-cOw"/>
+                                        <constraint firstItem="QZo-Tf-Gds" firstAttribute="centerX" secondItem="mfK-Wu-yKm" secondAttribute="centerX" id="WfG-fn-REa"/>
+                                        <constraint firstItem="mfK-Wu-yKm" firstAttribute="top" secondItem="Wdf-Ar-gyh" secondAttribute="top" constant="14" id="eMa-4c-uXK"/>
+                                        <constraint firstItem="QZo-Tf-Gds" firstAttribute="top" secondItem="mfK-Wu-yKm" secondAttribute="bottom" constant="5" id="htp-aC-mQy"/>
+                                        <constraint firstItem="wKL-Eh-V4P" firstAttribute="top" secondItem="Wdf-Ar-gyh" secondAttribute="top" constant="14" id="kOt-8V-4vu"/>
+                                        <constraint firstItem="mfK-Wu-yKm" firstAttribute="leading" secondItem="Wdf-Ar-gyh" secondAttribute="leading" constant="60" id="nfF-Yn-m7Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="wKL-Eh-V4P" secondAttribute="trailing" constant="60" id="nkw-nW-ffZ"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gr5-uC-u81">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gr5-uC-u81" id="hGI-C5-KA3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PIC-H3-Wkq" firstAttribute="top" secondItem="qAT-Wi-GcG" secondAttribute="topMargin" id="BWN-MM-sJe"/>
+                            <constraint firstItem="LeY-RM-9no" firstAttribute="top" secondItem="PIC-H3-Wkq" secondAttribute="bottom" id="IbM-MP-tTL"/>
+                            <constraint firstItem="PIC-H3-Wkq" firstAttribute="leading" secondItem="qAT-Wi-GcG" secondAttribute="leadingMargin" constant="-16" id="VYk-k9-FQX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PIC-H3-Wkq" secondAttribute="trailing" constant="-16" id="qRm-Ii-b8X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Projects" id="KoT-13-vXe">
                         <barButtonItem key="rightBarButtonItem" title="Notifications" id="kUj-Qu-J7e">
