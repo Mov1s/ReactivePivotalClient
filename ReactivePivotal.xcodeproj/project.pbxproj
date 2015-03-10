@@ -21,6 +21,8 @@
 		BB22FB361AA69CBB0061966B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB22FB351AA69CBB0061966B /* Images.xcassets */; };
 		BB22FB391AA69CBB0061966B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB22FB371AA69CBB0061966B /* LaunchScreen.xib */; };
 		BB22FB451AA69CBB0061966B /* ReactivePivotalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB441AA69CBB0061966B /* ReactivePivotalTests.m */; };
+		BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */; };
+		BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		BB22FB3E1AA69CBB0061966B /* ReactivePivotalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactivePivotalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB22FB431AA69CBB0061966B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB22FB441AA69CBB0061966B /* ReactivePivotalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactivePivotalTests.m; sourceTree = "<group>"; };
+		BBA9F5731AAF31DE00FF2C20 /* NotificationsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewModel.h; sourceTree = "<group>"; };
+		BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewModel.m; sourceTree = "<group>"; };
+		BBA9F5761AAF31EC00FF2C20 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,17 +154,18 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
-				BB078F9A1AA6AF60004B57DC /* Categories */,
 				BB078F961AA6A2EE004B57DC /* API Signals */,
+				BB078F9A1AA6AF60004B57DC /* Categories */,
 				BB078F921AA6A088004B57DC /* Login Scene */,
+				BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */,
+				BB22FB281AA69CBB0061966B /* Supporting Files */,
 				BB22FB2C1AA69CBB0061966B /* AppDelegate.h */,
 				BB22FB2D1AA69CBB0061966B /* AppDelegate.m */,
-				BB22FB2F1AA69CBB0061966B /* ViewController.h */,
-				BB22FB301AA69CBB0061966B /* ViewController.m */,
-				BB22FB321AA69CBB0061966B /* Main.storyboard */,
 				BB22FB351AA69CBB0061966B /* Images.xcassets */,
 				BB22FB371AA69CBB0061966B /* LaunchScreen.xib */,
-				BB22FB281AA69CBB0061966B /* Supporting Files */,
+				BB22FB321AA69CBB0061966B /* Main.storyboard */,
+				BB22FB2F1AA69CBB0061966B /* ViewController.h */,
+				BB22FB301AA69CBB0061966B /* ViewController.m */,
 			);
 			path = ReactivePivotal;
 			sourceTree = "<group>";
@@ -187,6 +194,17 @@
 				BB22FB431AA69CBB0061966B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9F5761AAF31EC00FF2C20 /* NotificationsViewController.h */,
+				BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */,
+				BBA9F5731AAF31DE00FF2C20 /* NotificationsViewModel.h */,
+				BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */,
+			);
+			path = "Notifications Scene";
 			sourceTree = "<group>";
 		};
 		C0259E0FD45F34D9BD8F0EB8 /* Frameworks */ = {
@@ -334,7 +352,9 @@
 			files = (
 				BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */,
 				BB078F951AA6A09C004B57DC /* LoginViewController.m in Sources */,
+				BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */,
 				BB22FB311AA69CBB0061966B /* ViewController.m in Sources */,
+				BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */,
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
