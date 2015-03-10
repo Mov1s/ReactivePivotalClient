@@ -154,16 +154,16 @@
 		BB22FB271AA69CBB0061966B /* ReactivePivotal */ = {
 			isa = PBXGroup;
 			children = (
-				BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */,
 				BB078F961AA6A2EE004B57DC /* API Signals */,
+				BB078F9A1AA6AF60004B57DC /* Categories */,
+				BB078F921AA6A088004B57DC /* Login Scene */,
+				BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */,
+				BB22FB281AA69CBB0061966B /* Supporting Files */,
 				BB22FB2C1AA69CBB0061966B /* AppDelegate.h */,
 				BB22FB2D1AA69CBB0061966B /* AppDelegate.m */,
-				BB078F9A1AA6AF60004B57DC /* Categories */,
 				BB22FB351AA69CBB0061966B /* Images.xcassets */,
 				BB22FB371AA69CBB0061966B /* LaunchScreen.xib */,
-				BB078F921AA6A088004B57DC /* Login Scene */,
 				BB22FB321AA69CBB0061966B /* Main.storyboard */,
-				BB22FB281AA69CBB0061966B /* Supporting Files */,
 				BB22FB2F1AA69CBB0061966B /* ViewController.h */,
 				BB22FB301AA69CBB0061966B /* ViewController.m */,
 			);
