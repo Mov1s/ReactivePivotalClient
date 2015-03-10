@@ -20,4 +20,9 @@
  */
 + (RACSignal *)requestNotifications;
 
+/** GET /projects
+ Gets all of a user's active projects
+ */
++ (RACSignal *)requestProjects;
+
 @end
