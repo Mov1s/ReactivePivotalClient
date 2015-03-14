@@ -44,6 +44,10 @@
 //This is responsible for make a validation request
 - (IBAction)validateApiKey: (id)sender
 {
+    //Save the api key
+    [self.userDefaults setPivotalApiToken: self.apiKey];
+    [self.userDefaults synchronize];
+    
     //Indicates validation request has started
     self.apiKeyValidationState = RPApiKeyValidationRequestStateValidating;
     

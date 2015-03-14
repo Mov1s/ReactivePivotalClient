@@ -21,6 +21,9 @@
 		BB22FB361AA69CBB0061966B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB22FB351AA69CBB0061966B /* Images.xcassets */; };
 		BB22FB391AA69CBB0061966B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB22FB371AA69CBB0061966B /* LaunchScreen.xib */; };
 		BB22FB451AA69CBB0061966B /* ReactivePivotalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB22FB441AA69CBB0061966B /* ReactivePivotalTests.m */; };
+		BB72D3901AB3589B00CB7A3E /* ChartColors.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB72D38F1AB3589B00CB7A3E /* ChartColors.plist */; };
+		BB72D3931AB35B4200CB7A3E /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB72D3921AB35B4200CB7A3E /* UIColor+Additions.m */; };
+		BB72D3961AB36FDC00CB7A3E /* RPPieChartSection.m in Sources */ = {isa = PBXBuildFile; fileRef = BB72D3951AB36FDC00CB7A3E /* RPPieChartSection.m */; };
 		BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */; };
 		BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5771AAF31EC00FF2C20 /* NotificationsViewController.m */; };
 		BBA9F57D1AAF4AF400FF2C20 /* RPCircleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F57C1AAF4AF400FF2C20 /* RPCircleLabel.m */; };
@@ -31,6 +34,7 @@
 		BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */; };
 		BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */; };
 		BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB75C1AB328D400FB0F66 /* RPView.m */; };
+		BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB7601AB339C200FB0F66 /* RPPieChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,11 @@
 		BB22FB3E1AA69CBB0061966B /* ReactivePivotalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactivePivotalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB22FB431AA69CBB0061966B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB22FB441AA69CBB0061966B /* ReactivePivotalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactivePivotalTests.m; sourceTree = "<group>"; };
+		BB72D38F1AB3589B00CB7A3E /* ChartColors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChartColors.plist; sourceTree = "<group>"; };
+		BB72D3911AB35B4200CB7A3E /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		BB72D3921AB35B4200CB7A3E /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		BB72D3941AB36FDC00CB7A3E /* RPPieChartSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPieChartSection.h; sourceTree = "<group>"; };
+		BB72D3951AB36FDC00CB7A3E /* RPPieChartSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPieChartSection.m; sourceTree = "<group>"; };
 		BBA9F5731AAF31DE00FF2C20 /* NotificationsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewModel.h; sourceTree = "<group>"; };
 		BBA9F5741AAF31DE00FF2C20 /* NotificationsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewModel.m; sourceTree = "<group>"; };
 		BBA9F5761AAF31EC00FF2C20 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
@@ -91,6 +100,8 @@
 		BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPlot.m; sourceTree = "<group>"; };
 		BBEDB75B1AB328D400FB0F66 /* RPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPView.h; sourceTree = "<group>"; };
 		BBEDB75C1AB328D400FB0F66 /* RPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPView.m; sourceTree = "<group>"; };
+		BBEDB75F1AB339C200FB0F66 /* RPPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPieChart.h; sourceTree = "<group>"; };
+		BBEDB7601AB339C200FB0F66 /* RPPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPieChart.m; sourceTree = "<group>"; };
 		CA1107B9D89B8CE2AB645DB4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +156,8 @@
 		BB078F9A1AA6AF60004B57DC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BB72D3911AB35B4200CB7A3E /* UIColor+Additions.h */,
+				BB72D3921AB35B4200CB7A3E /* UIColor+Additions.m */,
 				BBA9F58C1AAF7A2600FF2C20 /* NSArray+Additions.h */,
 				BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */,
 				BB078F9B1AA6AFFA004B57DC /* NSString+Additions.h */,
@@ -239,6 +252,7 @@
 		BBA9F5791AAF4AC000FF2C20 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
+				BBEDB75E1AB339B200FB0F66 /* Pie Chart */,
 				BBEDB75A1AB328C600FB0F66 /* View */,
 				BBA9F58F1AAF7CA100FF2C20 /* Plot */,
 				BBA9F57A1AAF4ADF00FF2C20 /* Circle Label */,
@@ -293,6 +307,18 @@
 				BBEDB75C1AB328D400FB0F66 /* RPView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BBEDB75E1AB339B200FB0F66 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				BBEDB75F1AB339C200FB0F66 /* RPPieChart.h */,
+				BBEDB7601AB339C200FB0F66 /* RPPieChart.m */,
+				BB72D38F1AB3589B00CB7A3E /* ChartColors.plist */,
+				BB72D3941AB36FDC00CB7A3E /* RPPieChartSection.h */,
+				BB72D3951AB36FDC00CB7A3E /* RPPieChartSection.m */,
+			);
+			path = "Pie Chart";
 			sourceTree = "<group>";
 		};
 		C0259E0FD45F34D9BD8F0EB8 /* Frameworks */ = {
@@ -388,6 +414,7 @@
 				BB22FB341AA69CBB0061966B /* Main.storyboard in Resources */,
 				BB22FB391AA69CBB0061966B /* LaunchScreen.xib in Resources */,
 				BB22FB361AA69CBB0061966B /* Images.xcassets in Resources */,
+				BB72D3901AB3589B00CB7A3E /* ChartColors.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,8 +472,11 @@
 				BBA9F5781AAF31EC00FF2C20 /* NotificationsViewController.m in Sources */,
 				BB22FB311AA69CBB0061966B /* ViewController.m in Sources */,
 				BBA9F5751AAF31DE00FF2C20 /* NotificationsViewModel.m in Sources */,
+				BB72D3961AB36FDC00CB7A3E /* RPPieChartSection.m in Sources */,
 				BBA9F5881AAF712D00FF2C20 /* VelocityViewModel.m in Sources */,
+				BB72D3931AB35B4200CB7A3E /* UIColor+Additions.m in Sources */,
 				BBA9F5811AAF4EDF00FF2C20 /* ProjectsViewController.m in Sources */,
+				BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */,
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
