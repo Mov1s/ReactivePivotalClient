@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VelocityViewModel.h"
 
-@interface VelocityViewController : UIViewController
+@interface VelocityViewController : UIViewController <UIDynamicAnimatorDelegate>
 
 @property (nonatomic, strong) VelocityViewModel *viewModel;
 

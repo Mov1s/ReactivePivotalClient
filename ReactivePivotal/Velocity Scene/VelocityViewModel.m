@@ -31,6 +31,7 @@
             
             return [value mapObjectsUsingBlock: ^id(NSDictionary *obj, NSUInteger idx) {
                 CGPoint plotPoint = [self plotPointForIteration: obj atIndex: idx];
+                NSLog(@"plot point %@", [NSValue valueWithCGPoint: plotPoint]);
                 return [NSValue valueWithCGPoint: plotPoint];
             }];
         }]

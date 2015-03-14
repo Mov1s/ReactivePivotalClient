@@ -33,6 +33,7 @@
 		BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58A1AAF761300FF2C20 /* VelocityViewController.m */; };
 		BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */; };
 		BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */; };
+		BBC20FC21AB4F3B300DCB091 /* SprintStatsCardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */; };
 		BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB75C1AB328D400FB0F66 /* RPView.m */; };
 		BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB7601AB339C200FB0F66 /* RPPieChart.m */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,8 @@
 		BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		BBA9F5901AAF7CB600FF2C20 /* RPPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPlot.h; sourceTree = "<group>"; };
 		BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPlot.m; sourceTree = "<group>"; };
+		BBC20FC01AB4F3B300DCB091 /* SprintStatsCardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SprintStatsCardAnimator.h; sourceTree = "<group>"; };
+		BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SprintStatsCardAnimator.m; sourceTree = "<group>"; };
 		BBEDB75B1AB328D400FB0F66 /* RPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPView.h; sourceTree = "<group>"; };
 		BBEDB75C1AB328D400FB0F66 /* RPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPView.m; sourceTree = "<group>"; };
 		BBEDB75F1AB339C200FB0F66 /* RPPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPieChart.h; sourceTree = "<group>"; };
@@ -283,6 +286,7 @@
 		BBA9F5851AAF711F00FF2C20 /* Velocity Scene */ = {
 			isa = PBXGroup;
 			children = (
+				BBC20FBF1AB4F39100DCB091 /* Animators */,
 				BBA9F5861AAF712D00FF2C20 /* VelocityViewModel.h */,
 				BBA9F5871AAF712D00FF2C20 /* VelocityViewModel.m */,
 				BBA9F5891AAF761300FF2C20 /* VelocityViewController.h */,
@@ -298,6 +302,15 @@
 				BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */,
 			);
 			path = Plot;
+			sourceTree = "<group>";
+		};
+		BBC20FBF1AB4F39100DCB091 /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				BBC20FC01AB4F3B300DCB091 /* SprintStatsCardAnimator.h */,
+				BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */,
+			);
+			path = Animators;
 			sourceTree = "<group>";
 		};
 		BBEDB75A1AB328C600FB0F66 /* View */ = {
@@ -480,6 +493,7 @@
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
+				BBC20FC21AB4F3B300DCB091 /* SprintStatsCardAnimator.m in Sources */,
 				BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */,
 				BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */,
 				BB078F9D1AA6AFFA004B57DC /* NSString+Additions.m in Sources */,
@@ -612,6 +626,7 @@
 				INFOPLIST_FILE = ReactivePivotal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -623,6 +638,7 @@
 				INFOPLIST_FILE = ReactivePivotal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

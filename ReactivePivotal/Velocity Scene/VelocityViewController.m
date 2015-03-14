@@ -18,6 +18,13 @@
 //Plot for showing velocity
 @property (nonatomic, weak) IBOutlet RPPlot *plot;
 
+@property (nonatomic, weak) IBOutlet UIView *plotContainer;
+
+//The container view for showing sprint stats
+@property (nonatomic, weak) IBOutlet UIView *sprintStatsContainer;
+
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+
 @end
 
 @implementation VelocityViewController
@@ -26,13 +33,49 @@
 {
     [super viewDidLoad];
     
+    //Initialize
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView: self.view];
+    self.animator.delegate = self;
+    
     //Bind activity indicator
-    RAC(self.activityIndicator, hidden) = [RACObserve(self.viewModel, velocityPlotPoints) map: ^id(NSArray *value) {
-        return @(value.count != 0);
+    [[RACObserve(self.viewModel, velocityPlotPoints)
+     
+        map: ^id(NSArray *value) {
+            return @(value.count != 0);
+        }]
+    
+     subscribeNext: ^(NSNumber *completedWithItems) {
+         self.activityIndicator.hidden = YES;
+         if ([completedWithItems boolValue]) [self animateStatsContainerIn];
     }];
     
     //Bind plot
     RAC(self.plot, plotPoints) = RACObserve(self.viewModel, velocityPlotPoints);
+}
+
+#pragma mark - Animator Delegate Methods
+- (void)dynamicAnimatorDidPause: (UIDynamicAnimator *)animator
+{
+    [animator removeAllBehaviors];
+}
+
+- (void)animateStatsContainerIn
+{
+    UIGravityBehavior *gravity = [[UIGravityBehavior alloc] initWithItems: @[ self.sprintStatsContainer, self.plotContainer ]];
+    gravity.gravityDirection = CGVectorMake(0, -3);
+    [self.animator addBehavior: gravity];
+    
+    UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems: @[ self.sprintStatsContainer ]];
+    [collisionBehavior setTranslatesReferenceBoundsIntoBoundaryWithInsets: UIEdgeInsetsMake(198, 0, -10000, 0)];
+    [self.animator addBehavior: collisionBehavior];
+    
+    UICollisionBehavior *plotCollisionBehavior = [[UICollisionBehavior alloc] initWithItems: @[ self.plotContainer ]];
+    [plotCollisionBehavior setTranslatesReferenceBoundsIntoBoundaryWithInsets: UIEdgeInsetsMake(0, 0, -10000, 0)];
+    [self.animator addBehavior: plotCollisionBehavior];
+    
+    UIPushBehavior *push = [[UIPushBehavior alloc] initWithItems: @[ self.plotContainer ] mode: UIPushBehaviorModeInstantaneous];
+    push.pushDirection = CGVectorMake(0, -500);
+    [self.animator addBehavior: push];
 }
 
 @end
