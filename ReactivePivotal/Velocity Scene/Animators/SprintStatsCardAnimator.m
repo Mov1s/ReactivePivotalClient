@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 RyanPopa. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SprintStatsCardAnimator.h"
 
 @interface SprintStatsCardAnimator()
@@ -22,16 +23,6 @@
 @end
 
 @implementation SprintStatsCardAnimator
-
-- (instancetype)init
-{
-    self = [super init];
-    if (!self) return nil;
-    
-    //Initialize
-    
-    return self;
-}
 
 #pragma mark - Setters
 //Sets the parent view and initializes the animator
@@ -61,7 +52,7 @@
         [self.animator removeAllBehaviors];
     }
     
-    //Gesture ends, apply velocity and snap behavior to keep the view visible
+    //Gesture ends, apply velocity
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled)
     {
         //Get current vertical velocity
@@ -74,24 +65,29 @@
         deceleration.resistance = 2.0;
         [self.animator addBehavior: deceleration];
         
-        //Calculate if the view has been scrolled outside of its alowed bounds
-        BOOL anchorToTop = self.sprintStatsCardView.frame.origin.y > self.scrollingTopBoundsInset;
-        BOOL anchorToBottom = self.sprintStatsCardView.frame.origin.y + self.sprintStatsCardView.frame.size.height < self.parentView.bounds.size.height - self.scrollingBottomBoundsInset;
-        
-        //If it has been scrolled outside of its alowed bounds create an attachment to pull it back in
-        if (anchorToTop || anchorToBottom)
-        {
-            //Calculate the anchor Y position
-            CGFloat anchorYPos = anchorToTop    ? self.scrollingTopBoundsInset :
-                                 anchorToBottom ? self.parentView.bounds.size.height - self.scrollingBottomBoundsInset - self.sprintStatsCardView.bounds.size.height : 0;
+        //Called during the decleration animation
+        @weakify(self);
+        deceleration.action = ^{
+            @strongify(self);
+            //Calculate if the view has been scrolled outside of its alowed bounds
+            BOOL anchorToTop = self.sprintStatsCardView.frame.origin.y > self.scrollingTopBoundsInset;
+            BOOL anchorToBottom = self.sprintStatsCardView.frame.origin.y + self.sprintStatsCardView.frame.size.height < self.parentView.bounds.size.height - self.scrollingBottomBoundsInset;
             
-            //Create and add an attachment behavior
-            UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc] initWithItem: self.sprintStatsCardView attachedToAnchor: CGPointMake(self.sprintStatsCardView.center.x, anchorYPos + self.sprintStatsCardView.bounds.size.height / 2)];
-            attachment.length = 0.0;
-            attachment.damping = .5;
-            attachment.frequency = 2;
-            [self.animator addBehavior: attachment];
-        }
+            //If it has been scrolled outside of its alowed bounds create an attachment to pull it back in
+            if (anchorToTop || anchorToBottom)
+            {
+                //Calculate the anchor Y position
+                CGFloat anchorYPos = anchorToTop    ? self.scrollingTopBoundsInset :
+                anchorToBottom ? self.parentView.bounds.size.height - self.scrollingBottomBoundsInset - self.sprintStatsCardView.bounds.size.height : 0;
+                
+                //Create and add an attachment behavior
+                UIAttachmentBehavior *attachment = [[UIAttachmentBehavior alloc] initWithItem: self.sprintStatsCardView attachedToAnchor: CGPointMake(self.sprintStatsCardView.center.x, anchorYPos + self.sprintStatsCardView.bounds.size.height / 2)];
+                attachment.length = 0.0;
+                attachment.damping = .3;
+                attachment.frequency = .5;
+                [self.animator addBehavior: attachment];
+            }
+        };
     }
     
     //Gesture has been updated, move the card view to the scroll position

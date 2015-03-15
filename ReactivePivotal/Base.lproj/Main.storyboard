@@ -301,7 +301,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDI-kp-Vup" userLabel="Plot Container">
-                                <rect key="frame" x="0.0" y="736" width="414" height="600"/>
+                                <rect key="frame" x="0.0" y="736" width="414" height="836"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9X0-y1-wMa" customClass="RPPlot">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
@@ -329,15 +329,14 @@
                                 <color key="backgroundColor" red="0.2784313725" green="0.63921568630000003" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="9X0-y1-wMa" firstAttribute="leading" secondItem="GDI-kp-Vup" secondAttribute="leading" id="350-bg-O9G"/>
-                                    <constraint firstAttribute="height" constant="600" id="BtU-FR-nof"/>
                                     <constraint firstAttribute="trailing" secondItem="9X0-y1-wMa" secondAttribute="trailing" id="Re2-mC-ueT"/>
                                     <constraint firstItem="9X0-y1-wMa" firstAttribute="top" secondItem="GDI-kp-Vup" secondAttribute="top" id="yrh-fc-Psk"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCL-Z6-1ez" userLabel="Sprint Metrics Container">
-                                <rect key="frame" x="0.0" y="736" width="414" height="850"/>
+                                <rect key="frame" x="0.0" y="736" width="414" height="690"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="850" id="hvh-Gc-3ds"/>
+                                    <constraint firstAttribute="height" constant="690" id="hvh-Gc-3ds"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="aj3-UK-i4g" kind="embed" id="5im-aK-B6w"/>
@@ -349,29 +348,27 @@
                         <constraints>
                             <constraint firstItem="qCL-Z6-1ez" firstAttribute="leading" secondItem="7PH-Cw-mj8" secondAttribute="leading" id="2qJ-vh-r1d"/>
                             <constraint firstItem="qCL-Z6-1ez" firstAttribute="top" secondItem="u94-oI-kaw" secondAttribute="bottom" id="6hm-pe-e5P"/>
-                            <constraint firstItem="GDI-kp-Vup" firstAttribute="top" secondItem="7PH-Cw-mj8" secondAttribute="top" id="Cpe-7v-3yG"/>
-                            <constraint firstItem="u94-oI-kaw" firstAttribute="top" secondItem="GDI-kp-Vup" secondAttribute="bottom" id="L5p-Aw-E2f"/>
                             <constraint firstItem="GDI-kp-Vup" firstAttribute="leading" secondItem="7PH-Cw-mj8" secondAttribute="leading" id="QVC-WE-WUt"/>
-                            <constraint firstItem="u94-oI-kaw" firstAttribute="top" secondItem="GDI-kp-Vup" secondAttribute="bottom" id="Sby-7x-fTl"/>
                             <constraint firstAttribute="trailing" secondItem="GDI-kp-Vup" secondAttribute="trailing" id="T47-2x-oNd"/>
                             <constraint firstAttribute="trailing" secondItem="qCL-Z6-1ez" secondAttribute="trailing" id="tZS-iz-2S5"/>
                             <constraint firstItem="GDI-kp-Vup" firstAttribute="top" secondItem="u94-oI-kaw" secondAttribute="bottom" id="zVL-9n-U1O"/>
+                            <constraint firstItem="GDI-kp-Vup" firstAttribute="height" secondItem="7PH-Cw-mj8" secondAttribute="height" constant="100" id="zlg-zf-ULc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="L5p-Aw-E2f"/>
-                                <exclude reference="Sby-7x-fTl"/>
-                                <exclude reference="Cpe-7v-3yG"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="metricsEntryAnimator" destination="WB5-8z-92k" id="8HD-zb-ei0"/>
                         <outlet property="plot" destination="9X0-y1-wMa" id="PVq-3F-A1a"/>
-                        <outlet property="plotContainer" destination="GDI-kp-Vup" id="ZiT-dc-6o2"/>
-                        <outlet property="sprintStatsContainer" destination="qCL-Z6-1ez" id="4qA-Rh-wZb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqv-TF-BwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="WB5-8z-92k" customClass="MetricsEntryAnimator">
+                    <connections>
+                        <outlet property="parentView" destination="7PH-Cw-mj8" id="rmS-xu-Ikw"/>
+                        <outlet property="sprintStatsCardView" destination="qCL-Z6-1ez" id="yLN-Tl-OXH"/>
+                        <outlet property="velocityPlotView" destination="9X0-y1-wMa" id="A8c-Em-2VG"/>
+                        <outlet property="velocityPlotViewContainer" destination="GDI-kp-Vup" id="WKA-yT-NVd"/>
+                    </connections>
+                </customObject>
                 <customObject id="V2P-ah-FHa" customClass="SprintStatsCardAnimator">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="scrollingTopBoundsInset">
@@ -396,9 +393,16 @@
                         <viewControllerLayoutGuide type="bottom" id="Gju-46-IHT"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4hK-jk-sFY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejj-Sm-kXp" userLabel="Horizontal Divider">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.90588235294117647" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="fTe-kC-2a9"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprint 24" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCi-Fq-c08" userLabel="Sprint Number">
                                 <rect key="frame" x="25" y="32" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -848,30 +852,28 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="8tg-Kz-2E1" secondAttribute="bottom" id="2mz-90-OkJ"/>
-                                    <constraint firstItem="B8T-D5-ifM" firstAttribute="top" secondItem="8tg-Kz-2E1" secondAttribute="bottom" constant="132" id="BHe-I5-evB"/>
                                     <constraint firstItem="8tg-Kz-2E1" firstAttribute="top" secondItem="B8T-D5-ifM" secondAttribute="bottom" constant="10" id="EuH-dc-ebC"/>
                                     <constraint firstItem="nXV-17-URW" firstAttribute="leading" secondItem="uBH-QQ-6Cg" secondAttribute="leading" id="Lp2-zc-Tp3"/>
                                     <constraint firstAttribute="trailing" secondItem="8tg-Kz-2E1" secondAttribute="trailing" id="NL9-Zm-0VA"/>
                                     <constraint firstItem="B8T-D5-ifM" firstAttribute="top" secondItem="uBH-QQ-6Cg" secondAttribute="top" id="S54-h1-Ytr"/>
-                                    <constraint firstAttribute="trailing" secondItem="nXV-17-URW" secondAttribute="trailing" constant="-8" id="VaG-Hm-EoH"/>
-                                    <constraint firstAttribute="height" constant="350" id="dFf-Xt-2Sw"/>
                                     <constraint firstItem="B8T-D5-ifM" firstAttribute="leading" secondItem="uBH-QQ-6Cg" secondAttribute="leading" id="fTO-IR-DXM"/>
                                     <constraint firstItem="8tg-Kz-2E1" firstAttribute="leading" secondItem="nXV-17-URW" secondAttribute="trailing" constant="10" id="g79-xB-w93"/>
                                     <constraint firstItem="nXV-17-URW" firstAttribute="top" secondItem="B8T-D5-ifM" secondAttribute="bottom" constant="10" id="zeM-sM-6oX"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="dFf-Xt-2Sw"/>
-                                        <exclude reference="BHe-I5-evB"/>
-                                        <exclude reference="VaG-Hm-EoH"/>
-                                    </mask>
-                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qok-Z1-BjK" userLabel="Horizontal Divider">
+                                <rect key="frame" x="0.0" y="688" width="414" height="2"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.90588235294117647" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="cOJ-oL-FEg"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="X1W-qj-t5a" firstAttribute="top" secondItem="MCi-Fq-c08" secondAttribute="bottom" constant="-3" id="28g-lm-fJn"/>
                             <constraint firstAttribute="trailing" secondItem="uBH-QQ-6Cg" secondAttribute="trailing" constant="25" id="2UH-r8-cIg"/>
+                            <constraint firstItem="Ejj-Sm-kXp" firstAttribute="top" secondItem="54e-ZL-grg" secondAttribute="bottom" id="3Xr-U9-wiT"/>
                             <constraint firstItem="uBH-QQ-6Cg" firstAttribute="top" secondItem="dog-CX-W5V" secondAttribute="bottom" constant="35" id="9GE-gc-bet"/>
                             <constraint firstItem="MCi-Fq-c08" firstAttribute="leading" secondItem="4hK-jk-sFY" secondAttribute="leading" constant="25" id="APH-ht-Vs1"/>
                             <constraint firstItem="MCi-Fq-c08" firstAttribute="top" secondItem="54e-ZL-grg" secondAttribute="bottom" constant="32" id="GHG-tH-5NR"/>
@@ -880,9 +882,14 @@
                             <constraint firstItem="S9P-nG-KFv" firstAttribute="top" secondItem="X1W-qj-t5a" secondAttribute="bottom" constant="35" id="P1c-2d-lPh"/>
                             <constraint firstItem="dog-CX-W5V" firstAttribute="leading" secondItem="4hK-jk-sFY" secondAttribute="leading" constant="25" id="Sv4-Ik-w1u"/>
                             <constraint firstItem="uBH-QQ-6Cg" firstAttribute="leading" secondItem="4hK-jk-sFY" secondAttribute="leading" constant="25" id="TRh-8y-aJJ"/>
+                            <constraint firstItem="qok-Z1-BjK" firstAttribute="leading" secondItem="4hK-jk-sFY" secondAttribute="leading" id="XpU-nq-OFG"/>
                             <constraint firstAttribute="trailing" secondItem="S9P-nG-KFv" secondAttribute="trailing" constant="25" id="dbn-sp-3T8"/>
                             <constraint firstItem="X1W-qj-t5a" firstAttribute="leading" secondItem="MCi-Fq-c08" secondAttribute="leading" id="ezY-2E-Nm1"/>
+                            <constraint firstAttribute="trailing" secondItem="Ejj-Sm-kXp" secondAttribute="trailing" id="laX-aS-UoB"/>
+                            <constraint firstAttribute="trailing" secondItem="qok-Z1-BjK" secondAttribute="trailing" id="nnU-5Z-0Xu"/>
                             <constraint firstAttribute="trailing" secondItem="dog-CX-W5V" secondAttribute="trailing" constant="25" id="qrB-4j-t4x"/>
+                            <constraint firstItem="Ejj-Sm-kXp" firstAttribute="leading" secondItem="4hK-jk-sFY" secondAttribute="leading" id="rMy-EZ-tLg"/>
+                            <constraint firstItem="Gju-46-IHT" firstAttribute="top" secondItem="qok-Z1-BjK" secondAttribute="bottom" id="yhA-OK-GK5"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

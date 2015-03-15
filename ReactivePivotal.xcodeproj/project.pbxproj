@@ -34,6 +34,7 @@
 		BBA9F58E1AAF7A2600FF2C20 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F58D1AAF7A2600FF2C20 /* NSArray+Additions.m */; };
 		BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */; };
 		BBC20FC21AB4F3B300DCB091 /* SprintStatsCardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */; };
+		BBC20FC51AB600CE00DCB091 /* MetricsEntryAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */; };
 		BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB75C1AB328D400FB0F66 /* RPView.m */; };
 		BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB7601AB339C200FB0F66 /* RPPieChart.m */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,8 @@
 		BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPlot.m; sourceTree = "<group>"; };
 		BBC20FC01AB4F3B300DCB091 /* SprintStatsCardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SprintStatsCardAnimator.h; sourceTree = "<group>"; };
 		BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SprintStatsCardAnimator.m; sourceTree = "<group>"; };
+		BBC20FC31AB600CE00DCB091 /* MetricsEntryAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetricsEntryAnimator.h; sourceTree = "<group>"; };
+		BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetricsEntryAnimator.m; sourceTree = "<group>"; };
 		BBEDB75B1AB328D400FB0F66 /* RPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPView.h; sourceTree = "<group>"; };
 		BBEDB75C1AB328D400FB0F66 /* RPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPView.m; sourceTree = "<group>"; };
 		BBEDB75F1AB339C200FB0F66 /* RPPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPieChart.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 			children = (
 				BBC20FC01AB4F3B300DCB091 /* SprintStatsCardAnimator.h */,
 				BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */,
+				BBC20FC31AB600CE00DCB091 /* MetricsEntryAnimator.h */,
+				BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				BBA9F5811AAF4EDF00FF2C20 /* ProjectsViewController.m in Sources */,
 				BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */,
 				BB078F991AA6A35B004B57DC /* PVRequestSignal.m in Sources */,
+				BBC20FC51AB600CE00DCB091 /* MetricsEntryAnimator.m in Sources */,
 				BB22FB2E1AA69CBB0061966B /* AppDelegate.m in Sources */,
 				BB22FB2B1AA69CBB0061966B /* main.m in Sources */,
 				BBC20FC21AB4F3B300DCB091 /* SprintStatsCardAnimator.m in Sources */,
@@ -626,7 +632,7 @@
 				INFOPLIST_FILE = ReactivePivotal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -638,7 +644,7 @@
 				INFOPLIST_FILE = ReactivePivotal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
