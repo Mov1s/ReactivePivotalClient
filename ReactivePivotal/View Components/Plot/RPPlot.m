@@ -41,6 +41,8 @@
     self.plotPointVisible = YES;
     self.plotPointRadius = 3;
     self.lineWidth = 2;
+    self.rangeMin = -10;
+    self.rangeMax = 100;
 }
 
 #pragma mark - Setters
@@ -50,9 +52,16 @@
     [self setNeedsDisplay];
 }
 
-- (void)setPlotTitle: (NSString *)plotTitle
+- (void)setRangeMax: (CGFloat)rangeMax
 {
-    _plotTitle = plotTitle;
+    _rangeMax = rangeMax;
+    [self setNeedsDisplay];
+}
+
+- (void)setRangeMin: (CGFloat)rangeMin
+{
+    _rangeMin = rangeMin;
+    [self setNeedsDisplay];
 }
 
 #pragma mark - IBDesignable Fugdgery
@@ -80,7 +89,7 @@
     
     //Draw plot points
     [self.plotPoints enumerateObjectsUsingBlock: ^(NSValue *pointValue, NSUInteger idx, BOOL *stop) {
-        CGPoint point = [self transformPoint: [pointValue CGPointValue] intoFrame: rect totalPoints: self.plotPoints.count maxHeight: 100];
+        CGPoint point = [self transformPoint: [pointValue CGPointValue] intoFrame: rect totalPoints: self.plotPoints.count];
         [self addPointToBackgroundPath: point inRect: rect];
         [self addPointToTrendBezierPath: point inRect: rect];
         if (self.plotPointVisible) [self addMarkerToPoint: point];
@@ -154,21 +163,18 @@
     [self.plotCircles makeObjectsPerformSelector: @selector(fill)];
     [self.plotCircles makeObjectsPerformSelector: @selector(stroke)];
     
-    //Draw plot title
-    [self.plotTitle drawAtPoint: CGPointMake(8, 8) withAttributes: @{ NSForegroundColorAttributeName : self.lineColor}];
-    
     CGContextRestoreGState(ref);
 }
 
-- (CGPoint)transformPoint: (CGPoint)point intoFrame: (CGRect)frame totalPoints: (NSInteger)totalPoints maxHeight: (CGFloat)maxHeight
+- (CGPoint)transformPoint: (CGPoint)point intoFrame: (CGRect)frame totalPoints: (NSInteger)totalPoints
 {
     //Calculate new x pos
     CGFloat xIncrement = frame.size.width / (totalPoints - 1);
     CGFloat xValue = xIncrement * point.x;
     
     //Calculate new y pos
-    CGFloat yIncrement = frame.size.height / maxHeight;
-    CGFloat yValue = frame.size.height - (yIncrement * point.y);
+    CGFloat yIncrement = frame.size.height / (self.rangeMax - self.rangeMin);
+    CGFloat yValue = frame.size.height - (yIncrement * (point.y - self.rangeMin));
     
     return CGPointMake(xValue, yValue);
 }

@@ -54,8 +54,22 @@
 
 - (void)prepareForSegue: (UIStoryboardSegue *)segue sender: (id)sender
 {
-    VelocityViewController *controller = segue.destinationViewController;
-    controller.viewModel = [[VelocityViewModel alloc] initWithProjectId: @994928];
+    NSString *segueIdentifier = segue.identifier;
+    
+    //Project metrics segue
+    if ([segueIdentifier isEqualToString: @"projectMetricsSegue"])
+    {
+        //Get the index of the selected cell
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell: cell];
+        
+        //Get a view model for the project metrics
+        VelocityViewModel *viewModel = [self.viewModel velocityViewModelForProjectAtIndex: selectedIndexPath.row];
+
+        //Assign the view model
+        VelocityViewController *controller = segue.destinationViewController;
+        controller.viewModel = viewModel;
+    }
 }
 
 #pragma mark - UITableView Datasource
@@ -66,6 +80,10 @@
 
 - (UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath: (NSIndexPath *)indexPath
 {
+    //Deselect the cell
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    
+    //Get the cell and project
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"projectCell"];
     NSDictionary *project = self.viewModel.projects[indexPath.row];
     

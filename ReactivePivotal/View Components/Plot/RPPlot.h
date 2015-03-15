@@ -11,15 +11,18 @@
 IB_DESIGNABLE
 @interface RPPlot : UIView
 
+#pragma mark - Line Configuration
 /** Trend line color */
 @property (nonatomic, strong) IBInspectable UIColor *lineColor;
 
 /** Width of the plot line */
 @property (nonatomic) IBInspectable CGFloat lineWidth;
 
+#pragma mark - Fill Configuration
 /** Fill color */
 @property (nonatomic, strong) IBInspectable UIColor *fillColor;
 
+#pragma mark - Plot Point Configuration
 /** Toggle the plot points on or off */
 @property (nonatomic) IBInspectable BOOL plotPointVisible;
 
@@ -29,7 +32,15 @@ IB_DESIGNABLE
 /** Array of NSValue's containing CGPoints representing plot points */
 @property (nonatomic, strong) NSArray *plotPoints;
 
-/** Title of the plot */
-@property (nonatomic, strong) IBInspectable NSString *plotTitle;
+#pragma mark - Plot Range Configuration
+/** The max Y value for the plot
+ Defaults to 10 above the highest value given in self.plotPoints
+ */
+@property (nonatomic) IBInspectable CGFloat rangeMax;
+
+/** The min Y value for the plot
+ Defaults to 10 below the lowest value given in self.plotPoints
+ */
+@property (nonatomic) IBInspectable CGFloat rangeMin;
 
 @end
