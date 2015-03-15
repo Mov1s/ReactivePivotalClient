@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RPViewController.h"
 
-@interface ProjectsViewController : UIViewController <UITableViewDataSource>
+@interface ProjectsViewController : RPViewController <UITableViewDataSource>
 
 @end

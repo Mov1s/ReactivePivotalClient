@@ -16,7 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //Make the navigation bar invisible
+    [[UINavigationBar appearance] setBackgroundImage: [UIImage new] forBarMetrics: UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage: [UIImage new]];
+
     return YES;
 }
 

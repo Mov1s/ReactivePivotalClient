@@ -13,9 +13,6 @@
 
 @interface VelocityViewController ()
 
-//Activity indicator to show the progress of velocity calculations
-@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
-
 //Animator in charge of showing the various metric views
 @property (nonatomic, weak) IBOutlet MetricsEntryAnimator *metricsEntryAnimator;
 
@@ -42,7 +39,6 @@
         //Triggered when the plot points are created
         //Stops the loading animations and animates in the stats if necessary
         subscribeNext: ^(NSNumber *completedWithItems) {
-            self.activityIndicator.hidden = YES;
             if ([completedWithItems boolValue]) [self.metricsEntryAnimator showMetrics];
         }];
     

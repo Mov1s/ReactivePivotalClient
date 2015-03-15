@@ -189,7 +189,7 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.2274509804" green="0.58431372550000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
@@ -207,20 +207,20 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.2274509804" green="0.58431372550000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZo-Tf-Gds">
                                             <rect key="frame" x="52" y="67" width="104" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.2274509804" green="0.58431372550000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySn-Jg-gZE">
                                             <rect key="frame" x="253" y="67" width="115" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.2274509804" green="0.58431372550000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -300,6 +300,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-vm-g8j">
+                                <rect key="frame" x="189" y="350" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDI-kp-Vup" userLabel="Plot Container">
                                 <rect key="frame" x="0.0" y="736" width="414" height="836"/>
                                 <subviews>
@@ -348,13 +352,20 @@
                         <constraints>
                             <constraint firstItem="qCL-Z6-1ez" firstAttribute="leading" secondItem="7PH-Cw-mj8" secondAttribute="leading" id="2qJ-vh-r1d"/>
                             <constraint firstItem="qCL-Z6-1ez" firstAttribute="top" secondItem="u94-oI-kaw" secondAttribute="bottom" id="6hm-pe-e5P"/>
+                            <constraint firstAttribute="centerX" secondItem="TmI-vm-g8j" secondAttribute="centerX" id="GKY-1J-GVw"/>
                             <constraint firstItem="GDI-kp-Vup" firstAttribute="leading" secondItem="7PH-Cw-mj8" secondAttribute="leading" id="QVC-WE-WUt"/>
                             <constraint firstAttribute="trailing" secondItem="GDI-kp-Vup" secondAttribute="trailing" id="T47-2x-oNd"/>
+                            <constraint firstAttribute="centerY" secondItem="TmI-vm-g8j" secondAttribute="centerY" id="jhz-8a-Rcg"/>
                             <constraint firstAttribute="trailing" secondItem="qCL-Z6-1ez" secondAttribute="trailing" id="tZS-iz-2S5"/>
                             <constraint firstItem="GDI-kp-Vup" firstAttribute="top" secondItem="u94-oI-kaw" secondAttribute="bottom" id="zVL-9n-U1O"/>
                             <constraint firstItem="GDI-kp-Vup" firstAttribute="height" secondItem="7PH-Cw-mj8" secondAttribute="height" constant="100" id="zlg-zf-ULc"/>
                         </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="navigationBarTintColor">
+                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="metricsEntryAnimator" destination="WB5-8z-92k" id="8HD-zb-ei0"/>
                         <outlet property="plot" destination="9X0-y1-wMa" id="PVq-3F-A1a"/>
@@ -899,4 +910,5 @@
             <point key="canvasLocation" x="1863" y="424"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.22745098039215686" green="0.58431372549019611" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

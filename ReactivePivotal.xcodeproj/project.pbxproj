@@ -35,6 +35,7 @@
 		BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA9F5911AAF7CB600FF2C20 /* RPPlot.m */; };
 		BBC20FC21AB4F3B300DCB091 /* SprintStatsCardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */; };
 		BBC20FC51AB600CE00DCB091 /* MetricsEntryAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */; };
+		BBC20FC91AB6130200DCB091 /* RPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC20FC81AB6130200DCB091 /* RPViewController.m */; };
 		BBEDB75D1AB328D400FB0F66 /* RPView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB75C1AB328D400FB0F66 /* RPView.m */; };
 		BBEDB7611AB339C200FB0F66 /* RPPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDB7601AB339C200FB0F66 /* RPPieChart.m */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,8 @@
 		BBC20FC11AB4F3B300DCB091 /* SprintStatsCardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SprintStatsCardAnimator.m; sourceTree = "<group>"; };
 		BBC20FC31AB600CE00DCB091 /* MetricsEntryAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetricsEntryAnimator.h; sourceTree = "<group>"; };
 		BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetricsEntryAnimator.m; sourceTree = "<group>"; };
+		BBC20FC71AB6130200DCB091 /* RPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPViewController.h; sourceTree = "<group>"; };
+		BBC20FC81AB6130200DCB091 /* RPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPViewController.m; sourceTree = "<group>"; };
 		BBEDB75B1AB328D400FB0F66 /* RPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPView.h; sourceTree = "<group>"; };
 		BBEDB75C1AB328D400FB0F66 /* RPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPView.m; sourceTree = "<group>"; };
 		BBEDB75F1AB339C200FB0F66 /* RPPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPieChart.h; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 				BB078F921AA6A088004B57DC /* Login Scene */,
 				BBA9F5721AAF31BE00FF2C20 /* Notifications Scene */,
 				BBA9F57E1AAF4ECB00FF2C20 /* Projects Scene */,
+				BBC20FC61AB612F100DCB091 /* Super Classes */,
 				BB22FB281AA69CBB0061966B /* Supporting Files */,
 				BBA9F5851AAF711F00FF2C20 /* Velocity Scene */,
 				BBA9F5791AAF4AC000FF2C20 /* View Components */,
@@ -316,6 +320,15 @@
 				BBC20FC41AB600CE00DCB091 /* MetricsEntryAnimator.m */,
 			);
 			path = Animators;
+			sourceTree = "<group>";
+		};
+		BBC20FC61AB612F100DCB091 /* Super Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBC20FC71AB6130200DCB091 /* RPViewController.h */,
+				BBC20FC81AB6130200DCB091 /* RPViewController.m */,
+			);
+			path = "Super Classes";
 			sourceTree = "<group>";
 		};
 		BBEDB75A1AB328C600FB0F66 /* View */ = {
@@ -483,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC20FC91AB6130200DCB091 /* RPViewController.m in Sources */,
 				BBA9F5921AAF7CB600FF2C20 /* RPPlot.m in Sources */,
 				BB078FA01AA6B123004B57DC /* NSMutableURLRequest+Additions.m in Sources */,
 				BBA9F58B1AAF761300FF2C20 /* VelocityViewController.m in Sources */,
