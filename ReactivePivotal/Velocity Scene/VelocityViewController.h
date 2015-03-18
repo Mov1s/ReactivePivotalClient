@@ -1,5 +1,5 @@
 //
-//  ProjectsViewController.h
+//  VelocityViewController.h
 //  ReactivePivotal
 //
 //  Created by Ryan Popa on 3/10/15.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RPViewController.h"
+#import "VelocityViewModel.h"
 
-@interface ProjectsViewController : RPViewController <UITableViewDataSource>
+@interface VelocityViewController : RPViewController
+
+@property (nonatomic, strong) VelocityViewModel *viewModel;
 
 @end

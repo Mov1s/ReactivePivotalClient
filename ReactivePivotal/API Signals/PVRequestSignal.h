@@ -25,4 +25,11 @@
  */
 + (RACSignal *)requestProjects;
 
+/** GET /projects/:projectId/iterations
+ Return a set of iterations from the project. (Paginated)
+ 
+ @param projectId The project to get iterations for
+ */
++ (RACSignal *)requestIterationsForProject: (NSNumber *)projectId;
+
 @end

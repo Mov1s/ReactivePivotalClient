@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class VelocityViewModel;
 
 @interface ProjectsViewModel : NSObject
 
@@ -18,5 +19,11 @@
 
 /** The count of the user's projects */
 @property (nonatomic, strong) NSNumber *totalProjectCount;
+
+/** Creates a new VelocityViewModel for a project
+ @param projectIndex The index of the project in self.projects
+ @return A VelocityViewModel
+ */
+- (VelocityViewModel *)velocityViewModelForProjectAtIndex: (NSInteger)projectIndex;
 
 @end

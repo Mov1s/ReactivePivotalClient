@@ -9,6 +9,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "ProjectsViewController.h"
 #import "ProjectsViewModel.h"
+#import "VelocityViewController.h"
+#import "VelocityViewModel.h"
 
 @interface ProjectsViewController ()
 
@@ -50,6 +52,26 @@
     }];
 }
 
+- (void)prepareForSegue: (UIStoryboardSegue *)segue sender: (id)sender
+{
+    NSString *segueIdentifier = segue.identifier;
+    
+    //Project metrics segue
+    if ([segueIdentifier isEqualToString: @"projectMetricsSegue"])
+    {
+        //Get the index of the selected cell
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell: cell];
+        
+        //Get a view model for the project metrics
+        VelocityViewModel *viewModel = [self.viewModel velocityViewModelForProjectAtIndex: selectedIndexPath.row];
+
+        //Assign the view model
+        VelocityViewController *controller = segue.destinationViewController;
+        controller.viewModel = viewModel;
+    }
+}
+
 #pragma mark - UITableView Datasource
 - (NSInteger)tableView: (UITableView *)tableView numberOfRowsInSection: (NSInteger)section
 {
@@ -58,6 +80,10 @@
 
 - (UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath: (NSIndexPath *)indexPath
 {
+    //Deselect the cell
+    [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    
+    //Get the cell and project
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"projectCell"];
     NSDictionary *project = self.viewModel.projects[indexPath.row];
     

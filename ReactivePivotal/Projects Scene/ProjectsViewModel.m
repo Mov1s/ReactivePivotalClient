@@ -9,6 +9,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "ProjectsViewModel.h"
 #import "PVRequestSignal.h"
+#import "VelocityViewModel.h"
 
 @implementation ProjectsViewModel
 
@@ -40,6 +41,12 @@
         }];
     
     return self;
+}
+
+- (VelocityViewModel *)velocityViewModelForProjectAtIndex: (NSInteger)projectIndex
+{
+    NSDictionary *project = self.projects[projectIndex];
+    return [[VelocityViewModel alloc] initWithProjectId: project[@"id"]];
 }
 
 @end
